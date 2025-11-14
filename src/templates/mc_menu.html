@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diavlo - MC</title>
+    <!-- IMPORTAMOS Estilos -->
+    <link rel="stylesheet" href="../../electron/css/header.css">
+    <link rel="stylesheet" href="../../electron/css/styles.css">
+    <link rel="stylesheet" href="../../electron/css/mc.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../../electron/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <!-- IMPORTAMOS Funcionalidades -->
+    <script src="../js/mcsearch.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link rel="stylesheet" href="../../electron/css/responsive.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <!-- IMPORTAMOS LA LIBRERIA PARA HACER EL EFECTO DE LAS PARTICULAS  -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../js/events.js"></script>
+    <style>
+
+        section {
+                bottom: -26px !important;
+        }
+
+        @media (max-width: 1340px) {
+            .loader {
+                margin-top: 15px;
+                right: -143px;
+            }
+        }
+
+        @media (max-height: 1060px) {
+            section {
+                bottom: 0 !important;
+            }
+        }
+
+        @media (max-height: 940px) {
+            section {
+                bottom: -10px !important;
+            }
+        }
+
+
+        @media (max-height: 890px) and (max-width: 1275px) {
+            section {
+                bottom: -45px !important;
+            }
+        }
+
+        @media (max-height: 845px) and (max-width: 1465px) {
+            section {
+                bottom: -40px !important;
+            }
+        }
+
+        @media (min-width:1466px) and (max-height: 845px) {
+            section {
+                bottom: -20px !important;
+            }
+        }
+
+        .rank-data {
+            flex-direction: row;
+            width: 217px;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .headerOptions {
+            margin-left: 8px;
+            margin-right: 15px;
+        }
+
+        .user-info h2 {
+            font-size: 22px;
+            margin-right: 6px;
+        }
+
+        .searchBar {
+            padding: 8px;
+            margin-bottom: -8px;
+        }
+
+        @media (max-height:915px) {
+            .resultsWrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+                overflow-y: scroll;
+                max-height: 368px;
+                border-radius: 20px;
+                overflow-x: hidden;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .result>img {
+                width: 267px;
+            }
+        
+            .resultsWrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+                overflow-y: scroll;
+                max-height: 368px;
+                border-radius: 20px;
+                overflow-x: hidden;
+                padding: 10px;
+                width: 420px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-height: 740px) and (max-width: 1200px) {
+            .resultsWrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+                overflow-y: scroll;
+                max-height: 283px;
+                border-radius: 20px;
+                overflow-x: hidden;
+                padding: 10px;
+                width: 420px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-height: 710px) {
+            .leftPanel {
+                margin-top: -4px;
+            }
+        }
+
+        @media (max-height: 723px) and (min-width: 1201px) {
+            .resultsWrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+                overflow-y: scroll;
+                max-height: 277px;
+                border-radius: 20px;
+                overflow-x: hidden;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (min-height: 951px) {
+            .activeMultipleSearch {
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+                background-color: rgb(175 2 2 / 55%) !important;
+                margin-top: -50px;
+            }
+        }
+
+        @media (max-height: 715px) {
+            .listNicknames_results {
+                border-radius: 10px;
+                height: fit-content;
+                min-height: 42px;
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+                background-color: rgba(67, 13, 13, 0.55) !important;
+                border-top-left-radius: 0;
+                padding: 10px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .ListNicknames {
+                margin-left: -41px;
+                width: 60%;
+                margin-top: 7px;
+            }
+        }
+
+        @media (max-height: 876px) {
+            .nicknameList {
+                max-height: 45px !important;
+            }
+        }
+
+        @media (max-height: 740px) {
+            .resultsOrdersWrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 20px;
+                max-height: 263px;
+                overflow-y: scroll;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+            margin-left: 10px;
+            height: 8px;
+        }
+
+        .resultsOrdersWrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+            max-height: 388px;
+            overflow-y: scroll;
+        }
+
+        @media (max-height: 750px) {
+            .resultsOrdersWrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 20px;
+                max-height: 289px;
+                overflow-y: scroll;
+            }
+        }
+
+        @media (max-width: 1290px) {
+            .resultsWrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .result>img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Efecto de particulas -->
+    <div id="particles-container"></div>
+
+    <audio id="backgroundAudio" autoplay>
+        <source src="../song/click.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Header -->
+    <main>
+
+        <header class="loggedHeaderMC">
+            <div class="headerUserDataMC" style="display:none;">
+                <div class="rankImageMC">
+                    <img src="../images/logotipo.png" draggable="false"
+                        alt="logo">
+                </div>
+                <div class="user-info">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <h2 class="usernameHeader">Loading...</h2>
+                    </div>
+
+                    <div class="rank-data">
+                        <div class="data__diavlo">
+                            <h3>Loading...</h3>
+                            <span>Loading...</span>
+                        </div>
+                        <div class="data__gen">
+                            <h3></h3>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerOptions">
+                <img class="HeaderHome" src="../images/home.webp" height="20px" width="20px" alt="Home">
+                <img class="HeaderHome" id="logs" src="../images/historial.png" height="25px" width="20px"
+                    alt="History">
+                <img class="HeaderHome" id="logout" src="../images/logout.png" height="20px" width="20px" alt="Logout">
+
+            </div>
+        </header>
+        <div id="history">
+            <img id="close_mc" src="../images/close_mc_real.png" alt="" width="20px" height="20px">
+            <h2 id="titulo">Historial de búsquedas:</h2>
+            <ol id="resultados-mc">
+            </ol>
+            <span id="not_found">
+                ¡No has realizado ninguna búsqueda! ¡Recuerda que aquí podrás visualizar tus últimas búsquedas (tus
+                últimas 15 si no eres extended, o bien tus últimas 50 si eres extended)! Esta opción es bastante útil,
+                ya que a veces se suele olvidar un nick que se buscó anteriormente. Además, hemos agregado más opciones
+                que explicamos en nuestro
+                <a id="canal_tg" href="https://t.me/diavlochannel"><b>canal de Telegram</b></a>.
+                </span>
+                </div>
+                <section>
+                    
+            <div class="searchBar">
+                <div class="import">
+                    <i class="file-import fa-solid fa-upload"></i>
+                    <input type="file" id="fileInput" title="">
+                </div>
+                <div class="multipleSearchDiv">
+                    <img src="../images/multiple.png" height="25px" width="25px" alt="multiple">
+                </div>
+                <form  id="form_mc">
+                    <div>
+                        <input type="text" class="" placeholder="Nickname de MC o una IP" name="search" minlength="3"
+                        maxlength="16" id="busqueda"/>
+                        <div class="MultipleSearchInputDiv hidden">
+                            <table class="MultipleSearchTable">
+                                <tbody class="MultipleSearchTableBody">
+                                    <tr id="first_row">
+                                        <td>
+                                            <div class="nicknameTableRow" style="padding-right:40px;">
+                                                <input class="multipleSearchTableNickname" type="text" placeholder="Nickname de MC" minlength="3" maxlength="16"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="TableAddNick">
+                                <span class="MultipleSearchAddSpan">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="searchButton" class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                    <select name="tiempo" id="tiempo">
+                        <option class="value" value="0">diavlo1.txt (19 millones)</option>
+                        <option class="value" value="1">diavlo2.txt (26 millones)</option>
+                        <option class="value" value="2">diavlo3.txt (26 millones)</option>
+                        <option class="value" value="3">diavlo4.txt (19 millones)</option>
+                        <option class="value" value="4">diavlo5.txt (20 millones)</option>
+                        <option class="value" value="5">diavlo6.txt (20 millones)</option>
+                        <option class="value" value="6">diavlo7.txt (14 millones)</option>
+                    </select>
+                </form>
+                <div class="export">
+                    <img src="../images/download.png" height="25px" width="25px" class="exportBtnMC" style="margin-left: 50px;">
+                </div>
+            </div>
+
+            <div class="ListNicknames">
+                <h3 class="ListNicknames_title">Resultados:</h3>
+                <ul class="listNicknames_results">
+
+                </ul>
+            </div>
+
+
+            <div class="resultsContainer">
+
+                <div class="default">
+                    <span><strong>Preguntas frecuentes.</strong></span>
+                    <h2>¿Cómo realizo una búsqueda?</h2>
+                    <p>
+                        Simplemente debes ingresar el nombre de usuario en nuestro buscador, luego presionar Enter o
+                        hacer clic en el icono de búsqueda (lupa), y se cargarán las contraseñas filtradas
+                        correspondientes a ese usuario.
+                    </p>
+                    <h2>¿Qué hago sino me encuentra el nick que busco?</h2>
+                    <p>Simplemente intenta probar con multicuentas relacionadas a esa persona o, en su lugar, prueba con
+                        otros nombres de usuario (nicks).</p>
+
+                    <h2>¿Para que sirve la tarifa extended?</h2>
+                    <p>Con esta tarifa, nuestro programa te ayudará a buscar multicuentas de varios usuarios. Además,
+                        disfrutarás de búsquedas más rápidas y tendrás acceso a una amplia gama de opciones premium.
+                        Para obtener más información detallada sobre estas opciones, te invitamos a visitar nuestro
+                        canal de Telegram.
+                    </p>
+                    <h2>¿Cuántos servidores tenéis en vuestras bases de datos actualmente?</h2>
+                    <p>Primero que nada, es importante destacar que toda la información que tenemos es pública y ha sido
+                        obtenida a través de filtraciones, no por nosotros. Dicho esto, queremos informarles que
+                        disponemos de más de 40 millones de contraseñas, y continuamos agregando más con el tiempo.
+                    </p>
+                    <span>Nota: Este cuadro desaparecerá al realizar una búsqueda.</span>
+                </div>
+
+                <div class="leftPanel">
+                    <div class="skinLoaderContainer">
+                        <div class="skinContainer">
+                            <label></label>
+                            <img max-width="120px" max-heigth="270px" width="120px" heigth="270px"
+                                src="../images/steve.png"
+                                alt="steve skin">
+                        </div>
+                    </div>
+                    <div class="userStatus hidden">
+                        <label></label>
+                    </div>
+                    <span class="hidden" id="historyText">Posibles multicuentas:</span>
+                    <div class="nicknameHistoryContainer">
+                        <ul class="nicknameList">
+                        </ul>
+                    </div>
+                </div>
+                <div class="RightPanel">
+                    <div class="loader">
+                        <div class="orbit-spinner">
+                            <div class="orbit"></div>
+                            <div class="orbit"></div>
+                            <div class="orbit"></div>
+                        </div>
+                        <span class="loadingText">Cargando...</span>
+                    </div>
+                    <div class="mc-result-type-selector" style="display: none;">
+                        <button class="mc-result-type-data active">Datos</button>
+                        <button class="mc-result-type-orders">Compras realizadas</button>
+                    </div>
+                    <div class="container_info">
+                    </div>
+                    <div class="resultsWrapper">
+                    </div>
+                    <div class="resultsOrdersWrapper" style="display: none;">
+                    </div>
+                    <div>
+                        <button class="dehash_button">Descifrar Hashes</button>
+                        <div class="lds-ellipsis">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li><span>Diavlo v3.6 © 2025</span></li>
+            <li><a href="https://diavlo.store">Tienda</a></li>
+            <li><a href="https://discord.gg/programadores">Discord</a></li>
+            <li><a href="https://t.me/diavlochannel">Telegram</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

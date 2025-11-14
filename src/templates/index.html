@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/logotipo.png" type="image/png">
+    <title>Diavlo v3.6</title>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- IMPORTAMOS LA LIBRERIA PARA HACER EL EFECTO DE LAS PARTICULAS  -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../js/events.js"></script>
+    <script src="../js/index_animation.js"></script>
+    <!-- ESTILOS PERSONALIZADOS -->
+    <link rel="stylesheet" href="../../electron/css/index.css">
+    <link rel="stylesheet" href="../../electron/css/responsive_index.css">
+    <link rel="stylesheet" href="../../electron/css/styles.css">
+    <link rel="stylesheet" href="../../electron/css/header.css">
+    <link rel="stylesheet" href="../../electron/css/responsive.css">
+
+    <!-- IMPORTAMOS Funcionalidad de JS -->
+    <script src="../js/index.js"></script>
+
+    <style>
+        @media (max-width: 1050px) {
+            .options {
+                width: fit-content;
+                padding-left: 0px;
+            }
+        }
+
+        @media (max-height: 915px) {
+
+            section {
+                bottom: -58px !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Efecto de particulas -->
+    <div id="particles-container"></div>
+
+    <audio id="backgroundAudio" autoplay loop>
+        
+    </audio>
+
+    <!--
+        
+        <div id="regalo">
+            <img id="regalo__img" src="../images/regalo.png" alt="regalo">
+            <div id="regalo__notificaciones">0</div>
+        </div>
+    -->
+
+    <!--
+
+        <div id="giveaway">
+            <img class="close" id="close_mc" src="../images/close_mc_real.png" alt="" width="20px" height="20px">
+            <h2 id="giveaway__title">¡PARTICIPA EN NUESTROS SORTEOS!</h2>
+    
+            <h3 id="empty_giveaway">¡No hay sorteos disponibles en este momento, intentalo más tarde!</h3>
+    
+        </div>
+    -->
+    
+    <div class="music">
+        <img class="music__image">
+    </div>
+
+    <main>
+
+        <header class="loggedHeader">
+            <div class="headerUserData">
+                <div class="rankImage">
+                    <img src="../images/logotipo.png" draggable="false" alt="logo">
+                </div>
+                <div class="user-info">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <h2 class="usernameHeader">loading...</h2>
+                    </div>
+
+                    <div class="rank-data">
+                        <div class="data__diavlo">
+                            <h3>Loading...</h3>
+                            <span>Loading...</span>
+                        </div>
+                        <div class="data__gen">
+                            <h3></h3>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerOptions">
+                <img class="HeaderHome" src="../images/home.webp" height="20px" width="20px">
+                <img class="HeaderHome" id="logout" src="../images/logout.png" height="20px" width="20px">
+            </div>
+        </header>
+
+        <section>
+
+            <div class="options">
+                <div class="ranks__tools">
+
+                    <div class="rankOptions">
+                        <div class="finder-container">
+                            <h3>FINDER</h3>
+                            <img src="../images/lupa2.png" width="100px" height="100px" class="icon-index">
+                            <p>Obtén datos de un nickname de redes sociales o un correo electrónico</p>
+                            <div class="requisitos">
+                                <p>Disponible para Mazikeen o Lucifer</p>
+                            </div>
+                        </div>
+                        <div class="mc-container">
+                            <h3>MC</h3>
+                            <img src="../images/minecraft-cube.png" class="icon-index">
+                            <p>Obtén datos de un nickname de minecraft</p>
+    
+                            <div class="requisitos">
+                                <p>Disponible para Human o Lucifer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: space-around; gap:30px;">
+                        <div class="adicional settings-container">
+                            <h3>AJUSTES</h3>
+                            <img class="icon-index"
+                                src="../images/settings.png">
+                            <p>Configura tu cuenta</p>
+                        </div>
+        
+                        <div class="adicional tools-container">
+                            <h3>TOOLS</h3>
+                            <img class="icon-index"
+                                src="../images/tools.png">
+                            <p>Herramientas avanzadas para usuarios con EXTENDED</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="options__generator">
+                    <h1 class="generator__title">DIAVLO <span class="new__edit">GENERATOR</span></h1>
+                    <div class="generator__image"><img class="image__img" src="../images/bombilla.png" alt="Bombilla"></div>
+                    <h2 class="generator__subtitle">GENERA CUENTAS AUTOMÁTICAMENTE</h2>
+                    <button class="generator__button">CONSEGUIR</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li><span>Diavlo v3.6 © 2025</span></li>
+            <li><a href="https://diavlo.store">Tienda</a></li>
+            <li><a href="https://discord.gg/programadores">Discord</a></li>
+            <li><a href="https://t.me/diavlochannel">Telegram</a></li>
+        </ul>
+
+    </footer>
+</body>
+
+</html>

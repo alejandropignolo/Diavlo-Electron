@@ -1,0 +1,55 @@
+.scanResult {
+    width: 99%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 21, 21, 0.5);
+}
+
+.scanResult__header {
+    color:rgba(218, 233, 12, 0.5);
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.scanResult__content {
+    margin-bottom: 0;
+}
+
+.scanResult__status--connected {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+.scanResult__status--premium {
+    color: yellow;
+    font-weight: bold;
+}
+
+.scanResult__status--disconnect {
+    color: rgb(230, 35, 35);
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.scanResult__basic {
+    padding: 10px;
+    border: 1px solid black;
+    width: 70%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 21, 21, 0.5);
+}
+
+.scanResult__advanced {
+    padding: 10px;
+    border: 0.2px solid black;
+    width: 70%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 22, 21, 0.5);
+    margin-bottom: 10px;
+}
+
+.scanResult__basic__header,
+.scanResult__advanced__header {
+    font-size: 25px;
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+}

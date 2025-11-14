@@ -1,0 +1,738 @@
+
+#particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+section{
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -300px;
+}
+
+.toolsAvaliable{
+    padding: 20px;
+    justify-content: center;
+    width: fit-content;
+    height: 300px;
+    margin-top: -200px !important;
+}
+
+.secret-key-div {
+    margin-top: -500px;
+
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 21, 21, 0.5);
+    margin-bottom: 10px;
+    padding: 10px !important;
+    width: 600px;
+}
+
+.searchBar{
+    margin: auto;
+}
+
+.backdiv {
+    float: left;
+}
+
+.backdiv > img {
+    filter: invert(1);
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.backdiv > img:hover,.exportBtn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.gobacktools{
+    filter: invert(1);
+}
+
+#searchButton {
+    margin-left: 0px !important;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.header-tebex-info {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+    gap: 35px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 21, 21, 0.5);
+    margin-bottom: 10px;
+    padding: 10px !important;
+    width: 700px;
+}
+
+.header-tebex-data{
+    text-align: left;
+
+}
+
+.header-tebex-data-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-tebex-data-url{
+    color: #f74770;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.header-tebex-data-url:focus-visible{
+    outline: none;
+}
+
+.header-tebex-img{
+    margin-left: 30px;
+}
+
+.tebex-order-item{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(23, 21, 21, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 680px;
+}
+
+.tebex-data-total-paid{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(23, 21, 21, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+.tebex-order-list{
+    max-height: 408px;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    justify-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.TebexData, .tebex-data{
+    position: fixed;
+    
+}
+
+.TebexData{
+    margin-top: -600px;
+}
+
+
+.tebex-order-data{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tebex-order-name-package{
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.tebex-order-date-price{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.tebex-order-name-package > p {
+    margin: 0;
+    font-weight: normal;
+    color: #f74770;
+    font-size: 18px;
+}
+
+.tebex-order-name-package > h2 {
+    margin: 0;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.tebex-order-name-package > h3 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.tebex-orders {
+    width: 700px;
+}
+
+.tebex-order-price{
+    font-weight: bold;
+    color: #f74770;
+    font-size: 22px;
+}
+
+.tebex-order-item div img {
+    width: 36px;
+    height: 90px;
+}
+
+.tebex-order-item{
+    transition: all 0.3s ease-in-out;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.tebex-order-item:hover{
+    transform: scale(1.02);
+}
+
+.tebex-order-skin{
+    margin-left: 20px;
+}
+
+.tebex-data-subtitle , .tebex-data-total-paid{
+    font-weight: bold;
+    font-size: 20px;
+    color: #f74770;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(23, 21, 21, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.tebex-data-total-paid{
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+
+.tebex-options{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    align-items: center;
+    margin-top: 5px;
+}
+
+
+.tebex-orders-button, .botonCrearCupon{
+    padding: 6px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(207 30 71 / 62%);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.botonCrearCupon{
+    padding: 7px;
+}
+
+.tebex-orders-button:hover, .botonCrearCupon:hover{
+    transform: scale(1.02);
+    background-color: rgba(121, 20, 43, 0.62);
+
+}
+
+section {
+    width: 536px;
+    margin-left: 65px;
+    margin-top: -500px;
+    margin-top: -7px;
+}
+
+.searchBar input {
+    width: 387px !important;
+}
+
+.tebex-coupons {
+    width: 100%;
+    min-width: 700px;
+}
+
+.cuponCreateInput{
+    padding: 12px;
+    width: 400px;
+    height: 100%;
+    color: #fff;
+    border: none;
+    height: 38px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(210, 128, 128, 0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.cuponCreateInput:focus{
+    outline: none;
+}
+
+
+.divCouponCreate {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(23, 21, 21, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    margin-bottom: 10px;
+}
+
+.divFormCouponCreate > form{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tebex-coupons-list{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 285px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.tebex-coupon-data{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(23, 21, 21, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.tebex-coupon-title-discount{
+    text-align: left;
+}
+
+.tebex-coupon-discount {
+    font-weight: bold;
+    color: #f74770;
+}
+
+.tebex-delete-coupon{
+    padding: 6px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(207 30 71 / 62%);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.tebex-coupon-item{
+    margin-right: 10px;
+}
+
+.tebex-delete-coupon:hover{
+    transform: scale(1.02);
+    background-color: rgba(121, 20, 43, 0.62);
+}
+
+.tebex-coupon-expiration {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.tebex-packages {
+    width: 700px;
+}
+
+.tebex-packages-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.tebex-package-item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(23, 21, 21, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+.tebex-package-data {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tebex-package-name > h3 {
+    margin: 0;
+    font-weight: bolder;
+    color: #f74770;
+}
+
+.tebex-package-name > p {
+    margin: 0;
+    font-weight: normal;
+}
+
+.tebex-package-date-price {
+    text-align: right;
+    min-width: fit-content;
+}
+
+.tebex-package-price {
+    font-weight: bold;
+    color: #f74770;
+}
+
+
+.edit-package-div{
+    z-index: 999;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(23, 21, 21, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.edit-package-div > form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    position: relative;
+    margin-top: 25%;
+}
+
+.edit-package-title, .edit-package-price {
+    padding: 12px;
+    width: 400px;
+    height: 100%;
+    color: #fff;
+    border: none;
+    height: 38px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(210, 128, 128, 0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.edit-package-title:focus , .edit-package-price:focus {
+    outline: none;
+}
+
+.close-edit-package {
+    float: right;
+    font-weight: bold;
+    color: #f74770;
+}
+
+.close-edit-package:hover {
+    cursor: pointer;
+    color: #8c243c;
+}
+
+.tebex-edit-package {
+    padding: 6px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(207 30 71 / 62%);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;  
+}
+
+.tebex-edit-package:hover {
+    transform: scale(1.02);
+    background-color: rgba(121, 20, 43, 0.62);
+}
+
+.package-edit-id{
+    color: #f74770;
+    font-weight: bolder;
+}
+
+.header-tebex-img img {
+    width: 70px;
+    height: 70px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+    section {
+        margin-left: -37px;
+    }
+}
+
+@media (max-width: 1445px) {
+    section {
+        margin-left: -33px;
+    }
+}
+
+@media (max-width: 1278px) {
+
+    .tebex-orders {
+        width: 647px;
+    }
+
+    .tebex-data-subtitle, .tebex-data-total-paid {
+        width: 650px;
+    }
+
+    section {
+        margin-left: 52px;
+    }
+    .tebex-order-name-package > h2 {
+        font-size: 20px;
+    }
+
+    .tebex-order-price {
+        font-size: 22px;
+    }
+
+    .tebex-order-skin {
+        width: 32px;
+        height: 94px;
+        margin-left: 20px;
+    }
+
+    .tebex-order-name-package > h3 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .tebex-data-total-paid {
+        font-size: 17px;
+    }
+
+    section {
+        bottom: -109px !important;
+    }
+
+    .tebex-order-item {
+        width: 610px;
+    }
+
+    .tebex-order-item {
+        width: 630px;
+    }
+
+    .header-tebex-info {
+        width: 650px;
+    }
+
+    .tebex-coupons {
+        min-width: 651px;
+    }
+
+    .tebex-packages {
+        width: 651px;
+    }
+
+    .tebex-package-item div img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .tebex-package-price {
+        font-size: 23px;
+    }
+
+    .tebex-package-price {
+        font-size: 14px;
+    }
+
+    .tebex-package-name > h3 {
+        font-size: 20px;
+    }
+ 
+    .tebex-package-name > p {
+        font-size: 14px;
+    }
+
+    .tebex-packages-list {
+        max-height: 307px;
+    }
+
+    .tebex-coupon-title-discount h3,
+    .tebex-coupon-discount {
+        font-size: 20px !important;
+    }
+
+}
+
+@media (max-height: 870px) {
+    .tebex-order-list {
+        max-height: 262px;
+    }
+
+    #container__buycraft {
+        bottom: -183px !important;
+    }
+
+    .tebex-coupons-list {
+        max-height: 137px;
+    }
+
+    .tebex-coupon-data {
+        padding: 15px;
+    }
+
+    .tebex-coupon-title-discount h3, .tebex-coupon-discount {
+        font-size: 18px !important;
+    }
+
+    .tebex-delete-coupon {
+        font-size: 13px;
+    }
+
+    .tebex-packages-list {
+        max-height: 316px;
+    }
+
+    .tebex-coupon-expiration p {
+        font-size: 15px;
+    }
+
+    .edit-package-div > form {
+        margin-top: 6rem;
+    }
+}
+
+@media (max-height: 765px) {
+    .tebex-packages-list {
+        max-height: 248px;
+    }
+
+    #container__buycraft {
+        bottom: -170px !important;
+    }
+
+    .edit-package-div > form {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 800px) {
+    section {
+        margin-left: 0px;
+    }
+
+    .tebex-order-list {
+        max-height: 242px;
+    }
+}
+
+@media (max-height: 725px) {
+    .tebex-order-list {
+        max-height: 127px;
+    }
+
+    #container__buycraft {
+        bottom: -229px !important;
+    }
+
+    .tebex-packages-list {
+        max-height: 221px;
+    }
+}

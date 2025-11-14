@@ -1,0 +1,195 @@
+.filetype_div{
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.filetype_div li{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+}
+
+.filetype_div input[type="radio"]{
+    -webkit-appearance: none;
+    padding: 0.6em;
+    outline: 0.1em solid rgba(204, 53, 53, 0.835);
+    border-radius: 5px;
+    outline-offset: 0.1em;
+}
+
+.filetype_div input[type="radio"]:hover{
+    cursor: pointer;
+}
+
+.filetype_div input[type="radio"]:checked {
+    display: inline-block;
+    background-color: rgba(204, 53, 53, 0.835);
+    transition: all 0.2s ease-in-out;
+  }
+
+.filetype_div input[type="radio"]:checked:hover{
+    background-color: rgba(184, 50, 50, 0.835);
+}
+
+.form_checker input[type="file"]{
+    background-color: rgba(204, 53, 53, 0.835);
+    color: white;
+}
+
+#searchButton {
+    position: relative !important;
+    background-color: rgba(204, 53, 53, 0.835);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+#searchButton:hover {
+    background-color: rgba(170, 46, 46, 0.835);
+    cursor: pointer;
+}
+
+.resultListPortChecker {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    list-style: none;
+    padding-left: 0;
+
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.titleResDiv{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 21, 21, 0.5);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.statusDiv{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.statusIcon{
+    width: 20px;
+    height: 20px;
+    background-color: rebeccapurple;
+    border-radius: 5px;
+}
+
+.premium{
+    background-color: rgba(204, 191, 53, 0.835);
+}
+
+.desconectado{
+    background-color: rgba(204, 53, 53, 0.835);
+}
+
+.conectado{
+    background-color: rgba(53, 204, 53, 0.835);
+}
+
+.innerResultDiv > img {
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.resultPortCheckerItem{
+    width: 80%;
+    margin: auto;
+}
+
+.moreInfoDiv{
+    margin-top: 3px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 21, 21, 0.5);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.infoVersionDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filtros_div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(23, 21, 21, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-align: right;
+}
+
+.filter_selection{
+    background-color: rgba(204, 53, 53, 0.835);
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+    color: white;
+    outline: none;
+}
+
+.filter_selection:hover{
+    background-color: rgba(184, 50, 50, 0.835);
+    cursor: pointer;
+    outline: none;
+}
+
+.filter_selection > option:hover{
+    background-color: rgba(204, 53, 53, 0.835) !important;
+    color: white;
+}
+
+.export {
+    margin-left: -5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.welcome_message {
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(23, 21, 21, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

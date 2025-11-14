@@ -1,0 +1,426 @@
+@media (max-height: 960px) {
+    section {
+        margin-top: -28px;
+    }
+}
+
+
+.mc-result-type-selector {
+    font-family: 'Minecraftia';
+    display: flex;
+    gap: 20px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.user-order-nick-server > h3 {
+    font-size: 20px;
+}
+
+.mc-result-type-selector > button {
+    outline: none;
+    padding: 15px;
+    border: none;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 21, 21, 0.5);
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.mc-result-type-selector > .active {
+    background-position: center;
+    background-image: url(../../src/images/fuego.gif);
+    background-size: cover;
+    background-blend-mode: color-burn;
+    background-color: rgb(255 139 139 / 50%);
+}
+
+.mc-result-type-selector > button{
+    transition: all 0.3s ease-in-out;
+}
+
+.mc-result-type-selector > button:hover {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 21, 21, 0.8);
+    transform: scale(1.01);
+}
+
+.resultsOrdersWrapper{
+    width: 100%;
+    margin-left: 10px;
+}
+
+.user-order-item{
+    display: flex;
+    gap: 30px;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(210, 128, 128, 0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    height: fit-content;
+    transition: all 0.5s ease-in-out;
+    text-align: left;
+    overflow: hidden;
+
+    min-height: 120px;
+    margin-right: 10px;
+}
+
+
+.user-order-data{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px;
+    background-blend-mode: color-burn;
+    background-color: rgb(255 139 139 / 60%);
+}
+
+
+.user-order-item-div h3 {
+    font-weight: bolder;
+    color: white;
+    font-size: 20px;
+}
+
+
+.user-order-data span {
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    font-family: 'Minecraftia';
+
+}
+
+.user-order-item-div {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: right;
+}
+
+.resultsOrdersWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    max-height: 525px;
+    overflow-y: scroll;
+}
+
+.resultsOrdersWrapper > .user-order-item:hover {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(210, 128, 128, 0.5);
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.multipleSearchDiv{
+    padding: 5px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(210, 128, 128, 0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.multipleSearchDiv > img {
+    filter: invert(1);
+}
+
+.multipleSearchDiv:hover{
+    cursor: pointer;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgb(175 2 2 / 55%) !important;
+}
+
+.activeMultipleSearch {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgb(175 2 2 / 55%) !important;
+    margin-top: -19px;
+}
+
+.MultipleSearchTable {
+    width: 150px;
+}
+
+.multipleSearchTableNickname {
+    border-radius: 10px !important;
+}
+
+
+.nicknameTableRow {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.multipleSearchTableNickname{
+    background:none !important;
+    border-radius: 0px !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    font-family: 'Minecraftia' !important;
+    font-size: 14px !important;
+}
+
+.FirstMultipleSearchTableNickname{
+    background:none !important;
+    border-radius: 0px !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    font-family: 'Minecraftia' !important;
+    font-size: 14px !important;
+    width: 100%;
+}
+
+.MultipleSearchReduceSpan{
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: rgba(38, 37, 37, 0.3);
+    border-radius: 3px;
+    display: flex;
+    width: fit-content;
+    margin-right: 5px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.MultipleSearchReduceSpan:hover{
+    cursor: pointer;
+    background-color: rgba(38, 37, 37, 0.5);
+}
+
+.TableAddNick{
+    margin-top: 5px !important;
+    padding: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 16px;
+
+    display: flex;
+    width: fit-content;
+    margin: auto;
+
+    transition: all 0.3s ease-in-out;
+}
+
+
+#form_mc{
+    display: flex;
+    gap: 0px;
+}
+
+#searchButton {
+    position: relative;
+}
+
+#busqueda {
+    width: 100%;
+    font-family: 'Minecraftia';
+    font-size: 14px;
+}
+
+
+.MultipleSearchTable > tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 94px;
+    overflow-y: scroll;
+    margin-right: 20px;
+}
+/*
+.MultipleSearchInputDiv {
+    display: none;
+}
+*/
+.activeMultipleSearchSearchButton {
+    background-color: rgb(175 2 2 / 55%) !important;
+    color: white !important;
+}
+
+.activeMultipleSearchSearchButton:hover {
+    background-color: rgba(174, 19, 19, 0.75) !important;
+}
+
+.MultipleSearchAddSpan{
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(148, 41, 41, 0.5);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.MultipleSearchAddSpan:hover{
+    cursor: pointer;
+    background-color: rgba(148, 41, 41, 0.7);
+}
+
+.ListNicknames {
+    display: none;
+    width: 60%;
+}
+
+.userResultList {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 20px;
+    padding: 20px;
+
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(67, 13, 13, 0.55) !important;
+}
+
+.ListNicknames_title{
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c50543;
+    padding: 8px;
+    background-color: rgb(255 239 230 / 55%) !important;
+    width: fit-content;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin: 0;
+}
+
+.listNicknames_results{
+    border-radius: 10px;
+    height: fit-content;
+    min-height: 50px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(67, 13, 13, 0.55) !important;
+    border-top-left-radius: 0;
+    padding: 10px;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.listNicknames_results_item {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(67, 13, 13, 0.75) !important;
+    transform: scale(1.01);
+    cursor: pointer;
+    width: fit-content;
+    padding: 3px;
+    padding-right: 10px;
+    padding-left: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.listNicknames_results_item:hover {
+    background-color: rgb(203 67 67 / 65%) !important;
+    transform: scale(1.01);
+}
+
+.activeResultOfList {
+    background-color: rgb(203 67 67 / 65%) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.activeResultOfList:hover {
+    transform: scale(1.01);
+}
+
+.import {
+    margin-right: 15px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    backdrop-filter: blur(10px);
+    background-color: rgba(210, 128, 128, 0.3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 10px;
+    padding: 2px 7px;
+    margin-top: -3px;
+    position: relative;
+}
+
+.file-import {
+    cursor: pointer;
+}
+
+.import:hover {
+    transform: scale(1.05);
+    background-color: rgb(175 2 2 / 55%) !important;
+}
+
+#fileInput {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+}
+
+#tiempo {
+    display: none;
+    margin-left: 1.2rem;
+    color: white;
+    background: linear-gradient(90deg, red, lightsalmon);
+    border: none;
+    padding: 3px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 4px;
+    height: 36px;
+}
+
+.value {
+    color: white;
+    background: lightsalmon;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.export {
+    margin-left: -2rem;
+}

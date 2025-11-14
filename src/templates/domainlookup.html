@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/logotipo.png" type="image/png">
+    <title>Diavlo 3.6</title>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- IMPORTAMOS LA LIBRERIA PARA HACER EL EFECTO DE LAS PARTICULAS  -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../js/events.js"></script>
+    <!-- ESTILOS PERSONALIZADOS -->
+    <link rel="stylesheet" href="../../electron/css/domainlookup.css">
+    <link rel="stylesheet" href="../../electron/css/responsive_index.css">
+    <link rel="stylesheet" href="../../electron/css/styles.css">
+    <link rel="stylesheet" href="../../electron/css/header.css">
+    <link rel="stylesheet" href="../../electron/css/responsive.css">
+
+    <!-- IMPORTAMOS Funcionalidad de JS -->
+    <script src="../js/domainlookup.js"></script>
+
+    <style>
+        @media (max-height: 1060px) {
+            section {
+                bottom: 5px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Efecto de particulas -->
+    <div id="particles-container"></div>
+
+    <audio id="backgroundAudio" autoplay>
+        <source src="../song/click.mp3" type="audio/mp3">
+    </audio>
+
+    <main>
+
+        <header class="loggedHeader">
+            <div class="headerUserData">
+                <div class="rankImage">
+                    <img src="../images/logotipo.png" draggable="false" alt="logo">
+                </div>
+                <div class="user-info">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <h2 class="usernameHeader">Loading...</h2>
+                    </div>
+
+                    <div class="rank-data">
+                        <div class="data__diavlo">
+                            <h3>Loading...</h3>
+                            <span>Loading...</span>
+                        </div>
+                        <div class="data__gen">
+                            <h3></h3>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerOptions">
+                <img class="HeaderHome" src="../images/home.webp" height="20px" width="20px">
+                <img class="HeaderHome" id="logout" src="../images/logout.png" height="20px" width="20px">
+            </div>
+        </header>
+
+        <section>
+
+            <div class="toolsAvaliable">
+
+                <div class="filters">
+
+                    <div class="backdiv">
+                        <img src="../images/back.png" height="25px" width="25px" class="gobacktools">
+                    </div>
+
+                    <div class="searchBar">
+                        <form id="form_mc">
+                            <input type="text" placeholder="Introduce el dominio" name="search" minlength="3"
+                                maxlength="50" id="busqueda" required>
+                            <button type="submit" id="searchButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="filterRes">
+                        <div class="form-check">
+                            <input class="form-check-input filter-cloudflare" type="checkbox"  id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Ocultar CloudFlare
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="export">
+                        <img src="../images/download.png" height="25px" width="25px" class="exportBtn">
+                    </div>
+                    
+                </div>
+
+                <div class="ResultContainer">
+                    <div class="loader">
+                        <div class="orbit-spinner">
+                            <div class="orbit"></div>
+                            <div class="orbit"></div>
+                            <div class="orbit"></div>
+                        </div>
+                        <span class="loadingText">Cargando...</span>
+                    </div>
+
+                    <div class="resultTitle">
+                        
+                    </div>
+                    <div class="resultList">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li><span>Diavlo v3.6 © 2025</span></li>
+            <li><a href="https://diavlo.store">Tienda</a></li>
+            <li><a href="https://discord.gg/programadores">Discord</a></li>
+            <li><a href="https://t.me/diavlochannel">Telegram</a></li>
+        </ul>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+</body>
+</html>

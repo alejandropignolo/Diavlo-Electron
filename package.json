@@ -1,0 +1,63 @@
+{
+  "name": "diavlo",
+  "version": "3.6.1",
+  "description": "The Best Minecraft Finder in the world",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron electron/main.js",
+    "pack": "electron-packager . diavlo --platform=PLATFORM --arch=ARCH --out=out",
+    "dist": "electron-builder",
+    "build:mac": "npm run pack -- --platform=darwin --arch=x64",
+    "build:win": "electron-packager . diavlo --platform=win32 --arch=ia32 --out=out4 --icon=icono.ico",
+    "build2:win": "electron-builder --win --x64",
+    "build:linux": "npm run pack -- --platform=linux --arch=x64",
+    "build2:linux": "electron-builder --linux --x64"
+  },
+  "repository": "https://github.com/diavlomc/diavlo",
+  "publish": {
+    "provider": "github",
+    "owner": "diavlomc",
+    "repo": "diavlo",
+    "releaseType": "release"
+  },
+  "author": "Diavlo v3",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.1.1",
+    "electron-builder": "^22.10.5",
+    "electron-packager": "^15.2.0",
+    "javascript-obfuscator": "^4.0.2"
+  },
+  "dependencies": {
+    "discord-rich-presence": "^0.0.8",
+    "electron-fetch": "^1.9.1",
+    "electron-is": "^3.0.0",
+    "electron-notification": "^1.0.0",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-updater": "^6.1.1",
+    "howler": "^2.2.4",
+    "is-in-subnet": "^4.0.1",
+    "node-fetch": "^3.3.1",
+    "node-machine-id": "^1.1.12"
+  },
+  "build": {
+    "appId": "rip.diavlo.app",
+    "productName": "Diavlo",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "diavlomc",
+        "repo": "diavlo"
+      }
+    ],
+    "mac": {
+      "icon": "icono.icns"
+    },
+    "win": {
+      "icon": "icono.png"
+    },
+    "linux": {
+      "icon": "icono.png"
+    }
+  }
+}

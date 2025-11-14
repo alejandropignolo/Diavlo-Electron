@@ -1,0 +1,21 @@
+@media (max-height: 740px) {
+    .login-card img {
+        height: 200px;
+    }
+}
+
+@media (max-height: 800px) {
+    .login-card {
+        margin-top: 8%;
+    }
+}
+
+@media (max-height: 614px) {
+    .login-card {
+        margin-top: 5%;
+    }
+
+    .login-card img {
+        height: 185px;
+    }
+}

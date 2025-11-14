@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/logotipo.png" type="image/png">
+    <title>Diavlo v3.6</title>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- IMPORTAMOS LA LIBRERIA PARA HACER EL EFECTO DE LAS PARTICULAS  -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../js/events.js"></script>
+    <!-- ESTILOS PERSONALIZADOS -->
+    <link rel="stylesheet" href="../../electron/css/tools.css">
+    <link rel="stylesheet" href="../../electron/css/responsive_index.css">
+    <link rel="stylesheet" href="../../electron/css/styles.css">
+    <link rel="stylesheet" href="../../electron/css/header.css">
+    <link rel="stylesheet" href="../../electron/css/responsive.css">
+
+    <!-- IMPORTAMOS Funcionalidad de JS -->
+    <script src="../js/tools.js"></script>
+    <style>
+        @media (max-height: 715px) {
+            section {
+                bottom: -41px !important;
+                right: -15px;
+            }
+        }
+
+        @media (min-width: 1205px) and (max-height: 710px) {
+            section {
+                bottom: -10px !important;
+            }
+        }
+
+        @media (max-height: 1060px) {
+
+            section {
+                bottom: 0px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Efecto de particulas -->
+    <div id="particles-container"></div>
+
+    <main>
+
+        <header class="loggedHeader">
+            <div class="headerUserData">
+                <div class="rankImage">
+                    <img src="../images/logotipo.png" draggable="false" alt="logo">
+                </div>
+                <div class="user-info">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <h2 class="usernameHeader">Loading...</h2>
+                    </div>
+
+                    <div class="rank-data">
+                        <div class="data__diavlo">
+                            <h3>Loading...</h3>
+                            <span>Loading...</span>
+                        </div>
+                        <div class="data__gen">
+                            <h3></h3>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerOptions">
+                <img class="HeaderHome" src="../images/home.webp" height="20px" width="20px">
+                <img class="HeaderHome" id="logout" src="../images/logout.png" height="20px" width="20px">
+            </div>
+        </header>
+
+        <section>
+
+            <div class="toolsAvaliable">
+
+                <div class="filters">
+
+                    <label for="filter">Filtros:</label>
+                    <div class="form-check">
+                        <input class="form-check-input filter-cuentas" type="checkbox"  id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Cuentas
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input filter-griefing" type="checkbox" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Griefing
+                        </label>
+                    </div>
+                    
+                    <div class="searchBar">
+                        <input type="text" id="searchFilter">
+                    </div>
+                </div>
+                <div class="toolsContainer">
+                    <ul class="toolsGrid">
+                        <li>
+                            <div class="tool" data-tool-type="Cuentas" id="nick_finder">
+                                <img src="../images/hack.gif" height="100px" width="auto" alt="tool" class="tools_image">
+                                <h3>NICK FINDER</h3>
+                                <p>Encuentra usuarios VIP o STAFF en servidores de Minecraft</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tool" data-tool-type="Griefing" id="domain_lookup">
+                                <img src="../images/domaingrapth.gif" height="100px" width="auto" alt="tool" class="tools_image">
+                                <h3>DOMAIN LOOKUP</h3>
+                                <p>Encuentra información relacionada a un dominio</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="tool" data-tool-type="Griefing" id="server_finder">
+                                <img src="../images/server-search.gif" height="100px" width="auto" alt="tool" class="tools_image">
+                                <h3>SERVER FINDER</h3>
+                                <p>Encuentra servidores de Minecraft a partir de filtros</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="tool" data-tool-type="Griefing" id="buycraft">
+                                <img src="../images/shop.png" height="100px" width="auto" alt="tool" class="tools_image">
+                                <h3>BUYCRAFT MANAGER</h3>
+                                <p>Creación de cupones y más a partir de una Key de BuyCraft</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="tool" data-tool-type="Griefing" id="scanip">
+                                <img src="../images/ipscan.webp" height="100px" width="auto" alt="tool" class="tools_image">
+                                <h3>IP SCANNER</h3>
+                                <p>Realiza un escaneo de puertos TCP [1-65535] a máxima velocidad</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="tool" data-tool-type="Cuentas" id="nickscrapper">
+                                <img id="casco__image" src="../images/casco.png" width="auto" alt="tool">
+                                <h3>NICK SCRAPPER</h3>
+                                <p>Mira las ventas más recientes de servidores de minecraft.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tool" data-tool-type="Griefing" id="portchecker">
+                                <!--
+                                    <div class="container__new">
+                                        <img class="new__image" src="../images/new.webp" alt="New option">
+                                    </div>
+                                -->
+                                <img src="../images/checkport.png" height="100px" width="auto" alt="tool" class="tools_image">
+                                <h3>CHECK PORTS</h3>
+                                <p>Verifica cuales puertos son accesibles y cuales no de un servidor de minecraft</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="tool" data-tool-type="Griefing" id="masscan">
+                                <img id="masscan__image" src="../images/kali-masscan.png" width="auto" alt="tool" class="tools_image">
+                                <h3>MASSCAN</h3>
+                                <p>Realiza escaneos de semirangos de IP con masscan para servers de minecraft.</p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li><span>Diavlo v3.6 © 2025</span></li>
+            <li><a href="https://diavlo.store">Tienda</a></li>
+            <li><a href="https://discord.gg/programadores">Discord</a></li>
+            <li><a href="https://t.me/diavlochannel">Telegram</a></li>
+        </ul>
+
+    </footer>
+</body>
+
+</html>

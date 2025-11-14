@@ -1,0 +1,219 @@
+@import url("../css/general.css");
+@import url('https://fonts.cdnfonts.com/css/gotham');
+
+/* Efecto de las particulas */
+
+#particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+section{
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolsAvaliable{
+    padding: 20px;
+    justify-content: center;
+    width: fit-content;
+
+}
+
+.filters {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row;
+
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 21, 21, 0.5);
+    margin-bottom: 10px;
+    background-color: rgb(6 6 6 / 60%);
+    width: 800px;
+}
+
+.searchBar input {
+    border-radius: 10px !important;
+}
+
+
+
+
+.disabled {
+    pointer-events: none;
+    filter: grayscale(80%);
+}
+
+.toolsGrid{
+    display: flex;
+    flex-wrap: wrap;    
+    list-style: none;
+    padding: 20px;
+    margin: 0px;
+    gap: 30px;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.tool{
+    padding: 20px;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(33, 31, 31, 0.5);
+    border-radius: 5px;
+    width: 230px !important;
+    place-self: center;
+    border-radius: 30px;
+    background-color: rgb(6 6 6 / 60%);
+    height: 270px  !important;
+
+    box-sizing: border-box;
+
+}
+
+.tool > p {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(33, 31, 31, 0.5);
+}
+
+.tool > h3 {
+    font-weight: bold;
+    font-family: 'Gotham Black','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+
+.tool:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    /* mix-blend-mode: screen; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color-burn;
+    background-image: url(../../src/images/fuego.gif);
+    box-shadow: 1px 1px 4px 0px rgba(145, 25, 25, 0.6);
+    filter: brightness(1.1) saturate(1.1);
+    background-color: rgb(255 139 139 / 60%);
+}
+
+.filters > input[type="checkbox"] {
+    border: red;
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+}
+
+.form-check{
+    align-items: center;    
+}
+
+.form-check-input:checked {
+    background-color: rgba(204, 53, 53, 0.835);
+    border-color: rgba(204, 53, 53, 0.835);
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+}
+
+.form-check .form-check-input {
+    margin-right: 5px;
+}
+
+.toolsContainer {
+    width: 800px;
+    height: 600px;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+#domain_lookup > img {
+    filter: invert(1);
+}
+
+.toolsGrid{
+    border-radius: 30px;
+    padding: 20px 0px 20px 0px;
+    width: fit-content;
+}
+
+.form-check-input:focus {
+    border-color: rgba(225, 68, 68, 0.1);;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(204, 53, 53, 0.1);;
+}
+
+.form-check {
+    align-items: center !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.container__new {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: auto;
+    height: auto;
+}
+
+.tool {
+    overflow: hidden;
+}
+
+.new__image {
+    width: 140px;
+}
+
+#scanip > img {
+    filter: invert(1);
+}
+
+#casco__image {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+
+/* MediaQuerus especiales */
+@media (max-height: 1230px) {
+    .toolsContainer {
+        height: 440px;
+    }
+
+}
+
+@media (max-height: 715px) {
+    section {
+        bottom: 0px !important;
+    }
+    
+}

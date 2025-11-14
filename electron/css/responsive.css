@@ -1,0 +1,724 @@
+@media (max-width: 1500px) {
+    .toolsContainer {
+        width: 600px;
+    }
+
+    .searchBar input {
+        width: 263px;
+    }
+
+    .loggedHeader {
+        margin-top: 11px;
+    }
+
+    .tool > h3 {
+        font-size: 18px;
+    }
+
+    .tool > p {
+        font-size: 13px;
+    }
+
+    .tools_image {
+        width: 86px;
+        height: 86px;
+    }
+
+    .tool {
+        width: 221px !important;
+        height: 241px !important;
+    }
+
+    .toolsGrid {
+        padding-left: 68px;
+    }
+
+    .searchBar input {
+        font-size: 1.1rem;
+    }
+
+    .filters {
+        width: 536px;
+        margin-left: 65px;
+    }
+}
+
+@media (max-width: 1290px) {
+    /* MCMENU */
+    .default h2  {
+        font-size: 17px;
+    }
+
+    .default p {
+        font-size: 15px;
+    }
+
+    .rankImage > img {
+        width: 85px;
+        height: 87px;
+    }
+
+    .searchBar > input {
+        font-size: 16px;
+    }
+
+    .default span {
+        font-size: 13px;
+    }
+
+    .resultsWrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .result {
+        width: 100%;
+    }
+
+    .RightPanel {
+        width: 59%;
+    }
+
+    .resultsWrapper {
+        max-height: 509px;
+    }
+    /* FIN MCMENU */
+
+    /* INICIO SETTINGS */
+    .change_password {
+        width: 30% !important;
+        font-size: 13px;
+    }
+
+    #choose-brute {
+        width: 227px;
+        height: 32px;
+        text-align: center;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+    }
+
+    .change_password h3 {
+        margin: 0px;
+        width: 100%;
+        margin-bottom: 6px;
+        text-align: center; 
+        font-size: 16px !important;
+    }
+
+    .change_password h3:last-of-type {
+        text-align: center;
+        margin-left: 0px !important;
+    }
+
+    #settings_input {
+        width: 80px;
+        font-size: 15px;
+    }
+    /* FIN SETTINGS */
+
+    /* MC */
+    #history ol li {
+        font-size: 16px;
+    }
+    /* FIN MC */
+}
+
+
+
+@media (max-width: 1204px) {
+    .result {
+        width: 100%;
+    }
+    /* INICIO SETTINGS */
+    .change_password input[type="text"], .change_password input[type="password"] {
+        border-radius: 10px;
+        width: 71%;
+        margin-bottom: 6px;
+    }
+
+    .change_password h3 {
+        margin: 0px;
+        width: 100%;
+        margin-bottom: 6px;
+        text-align: center;
+        font-size: 15px !important;
+    }
+
+    #explain-brute {
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+    /* FIN SETTINGS */
+}
+@media (max-height: 958px) {
+    .default h2:last-of-type, .default p:last-of-type {
+        display: none;
+    }
+
+    .default {
+        height: 85%;
+    }
+
+    .default h2 {
+        font-size: 19px;
+    }
+}
+
+@media (max-height: 1000px) {
+    .skinContainer img {
+        height: 158px !important;
+        width: 77px !important;
+    }
+
+    .skinContainer > label {
+        font-size: 12px;
+    }
+
+    .skinContainer {
+        max-width: 122px;
+    }
+
+}
+
+@media (max-height: 875px) {
+    .default {
+        height: 75%;
+    }
+}
+
+@media (max-height: 820px) {
+    .default {
+        height: 65%;
+    }
+}
+
+@media (max-height: 863px) {
+    .resultsWrapper {
+        max-height: 437px;
+    }
+    
+    section {
+        margin-top: 22px;
+    }
+}
+
+
+@media (max-height: 733px) {
+    .default {
+        height: 54%;
+        margin-bottom: 15px;
+    }
+
+    .default p {
+        font-size: 12px;
+    }
+
+    .default h2 {
+        font-size: 14px;
+    }
+
+    .rankImage > img {
+        width: 62px;
+        height: 54px;
+    }
+
+    .rank-data h3 {
+        font-size: 13px;
+    }
+
+    .rank-data span {
+        font-size: 12px;
+    }    
+
+    .user-info h2 {
+        font-size: 16px;
+    }
+
+    .skinContainer img {
+        height: 217px;
+        width: 107px;
+    }
+}
+
+@media (max-height: 610px) {
+    .resultsContainer {
+        margin-top: 10px;
+    }
+}
+
+@media (max-height: 876px) {
+    .nicknameList {
+        max-height:  80px !important;
+    }
+}
+
+@media (max-height: 660px) {
+    .default {
+        height: 48%;
+        margin-bottom: 35px;
+    }
+
+    .default h2 {
+        font-size: 13px;
+    }
+
+    .default p {
+        font-size: 11px;
+    }
+
+    .default span {
+        display: none;
+    }
+
+    footer ul {
+        margin-top: -3px;
+    }
+
+    .rankImage > img {
+        width: 71px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 1130px) {
+    /* MCMENU */
+
+    .rankImage > img {
+        width: 68px;
+        height: 71px;
+    }
+
+    .user-info h2{
+        font-size: 18px;
+    }
+
+    .rank-data h3{
+        font-size: 16px
+    }
+    /* FIN MCMENU */
+}
+
+@media (max-width: 1050px) {
+    /* MCMENU */  
+
+    .searchBar > button {
+        height: 36px;
+    }
+
+    .searchBar > input {
+        width: 271px;
+        font-size: 11px;
+    }
+
+    .default p {
+        font-size: 14px;
+    }
+
+    .default h2 {
+        font-size: 16px;
+    }
+
+    .loggedHeader {
+        float: left;
+        margin-left: 31px;
+    }
+
+    .default {
+        padding: 10px;
+    }
+
+    .default span {
+        display: none;
+    }
+
+    .skinContainer img {
+        height: 217px;
+        width: 107px;
+    }
+
+    .result {
+        width: 100%;
+    }
+
+    .result {
+        font-size: 15px;
+    }
+
+    .loggedHeader {
+        margin-top: 24px;
+    }
+    /* FIN MCMENU */
+
+    .settings-container, .tools-container {
+        height: 168px !important;
+    }
+
+    .tools-container img {
+        height: 60px;
+    }
+
+    .settings-container, .tools-container {
+        height: 168px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 204px !important;
+    }
+
+    section {
+        position: absolute;
+        margin-top: -7px;
+    }
+
+    .options {
+        width: fit-content;
+        padding-left: 42px;
+    }
+
+    /* ESTILOS DEL GENERADOR MENU PRINCIPAL */
+
+}
+
+@media (max-width: 940px) {
+
+    .tool {
+        width: 200px !important;
+        height: 216px !important;
+    }
+
+    .tools_image {
+        width: 69px;
+        height: 70px;
+    }
+
+    .tool > h3 {
+        font-size: 13px;
+    }
+
+    .tool > p {
+        font-size: 12px;
+    }
+
+    .tool {
+        width: 200px !important;
+        height: 196px !important;
+    }
+    
+    .toolsContainer {
+        height: 600px;
+    }
+
+    .searchBar > input {
+        width: 195px;
+    }
+
+    .default p {
+        font-size: 12px;
+    }
+
+    .default h2 {
+        font-size: 14px;
+    }
+
+    .result {
+        width: 100%;
+        padding-bottom: 23px;
+    }
+
+    .toolsContainer {
+        height: 405px;
+    }
+}
+
+
+@media (max-height: 793px) {
+    section {
+        position: absolute;
+        margin-top: 36px;
+    }
+}
+
+@media (max-height: 710px) {
+    .result {
+        font-size: 13px;
+    }
+
+    .resultsWrapper {
+        max-height: 373px;
+    }
+
+    .leftPanel {
+        margin-top: -23px;
+    }
+}
+
+@media (max-width: 1278px) {
+    .loggedHeader {
+        float: left;
+        margin-left: 20px;
+    }
+}
+
+@media (max-height: 878px) {
+    .default {
+        margin-top: 36px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .rankImage > img {
+        width: 50px;
+        height: 48px;
+    }
+
+    .user-info h2 {
+        margin-bottom: 0px !important;
+    }
+
+    .rank-data h3 {
+        font-size: 12px;
+    }
+
+    .loggedHeader {
+        margin-top: 6px;
+        margin-left: 5px;
+    }
+}
+
+@media (max-height: 750px) {
+    .adicional {
+        height: 172px !important;
+    }
+}
+
+/* REGLAS PARA LOS REGALOS */
+
+@media (max-width: 1440px) {
+    #giveaway__title {
+        font-size: 20px;
+    }
+
+    .tarjeta__time {
+        font-size: 13px;
+    }
+
+    .tarjeta__time__finish {
+        font-size: 13px;
+    }
+
+    .tarjeta__button {
+        width: 90px;
+    }
+
+    .tarjeta__button__participando {
+        width: 98px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #giveaway__title {
+        font-size: 18px;
+    }
+
+    .tarjeta__title {
+        font-size: 10px;
+    }
+
+    .tarjeta__time__finish {
+        font-size: 11px;
+    }
+
+    .tarjeta__button {
+        width: 76px;
+        font-size: 12px;
+    }
+
+    .tarjeta__button__participando {
+        font-size: 9px;
+    }
+
+    .tarjeta__button__participando {
+        width: 81px;
+    }
+}
+
+@media (max-height: 1060px) {
+    section {
+        bottom: -52px !important;
+    }
+}
+
+@media (max-height: 771px) {
+    .rankOptions > div {
+        height: 292px;
+    }
+
+    .options h3 {
+        font-size: 17px;
+    }
+
+    .tools-container img {
+        height: 49px;
+    }
+
+    .rankOptions img {
+        height: 54px;
+        width: 44px;
+    }
+
+    .new__edit {
+        font-size: 16px !important;
+    }
+
+    .generator__title {
+        font-size: 16px !important;
+    }
+
+    .image__img {
+        width: 61% !important;
+    }
+
+    .requisitos > p {
+        font-size: 12px;
+    }
+}
+
+@media (max-height: 710px) {
+
+    .rankOptions > div, .settings-container, .tools-container {
+        padding: 20px;
+        justify-content: center;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgb(6 6 6 / 60%);
+        border-radius: 5px;
+        width: 212px !important;
+        place-self: center;
+        border-radius: 30px;
+    }
+
+    .rankOptions img {
+        height: 54px;
+        width: 53px;
+    }
+
+    .generator__subtitle {
+        font-size: 14px;
+    }
+
+    .rankOptions > div > p {
+        padding: 4px;
+    }
+
+    .adicional {
+        height: 142px !important;
+    }
+
+    .tools-container img {
+        height: 33px;
+    }
+
+    .settings-container img {
+        height: 48px;
+    }
+
+    .options__generator {
+        width: 192px !important;
+    }
+}
+
+@media (max-width: 1395px) {
+    .user-order-data {
+        padding: 16px;
+    }
+
+    .user-order-item-div h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1260px) {
+    .user-order-nick-server > h3 {
+        font-size: 17px;
+    }
+
+    .user-order-data span {
+        font-size: 12px;
+    }
+
+    .user-order-item-div h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 955px) {
+    .mc-result-type-data, .mc-result-type-orders, .mc-result-type-selector {
+        font-size: 11px !important;
+    }
+
+    .user-order-item {
+        min-height: 104px;
+    }
+}
+
+@media (max-height: 950px) {
+    .MultipleSearchInputDiv {
+        margin-bottom: -31px;
+    }
+}
+
+@media (max-height: 915px) {
+    .resultsWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        overflow-y: scroll;
+        max-height: 368px;
+        border-radius: 20px;
+        overflow-x: hidden;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    section {
+        bottom: -70px !important;
+    }
+}
+
+@media (max-height: 775px) {
+    .MultipleSearchTable > tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: 42px;
+        overflow-y: scroll;
+        margin-right: 20px;
+    }
+}
+
+@media (max-height: 725px) {
+    .resultsWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        overflow-y: scroll;
+        max-height: 249px;
+        border-radius: 20px;
+        overflow-x: hidden;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .listNicknames_results {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1600px) {
+    .result>img {
+        border-radius: 5px;
+        width: 300px;
+    }
+}

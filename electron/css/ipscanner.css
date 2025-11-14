@@ -1,0 +1,244 @@
+
+/* Efecto de las particulas */
+
+#particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+section{
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolsAvaliable{
+    padding: 20px;
+    justify-content: center;
+    width: fit-content;
+}
+
+.filters {
+
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(23, 21, 21, 0.5);
+    margin-bottom: 10px;
+    padding: 10px !important;
+    width: 800px;
+}
+
+.backdiv {
+    float: left;
+}
+
+.export{
+    float: right;
+}
+
+.export{
+    margin-right: 10px;
+}
+
+.exportBtn {
+    transition: all 0.3s ease-in-out;
+}
+
+.backdiv > img {
+    filter: invert(1);
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.backdiv > img:hover,.exportBtn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.gobacktools{
+    filter: invert(1);
+}
+
+#searchButton {
+    margin-left: 0px !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.ResultContainer{
+    height: 600px;
+    width: 800px;
+}
+
+.resultList {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    overflow-y: auto;
+    height: 79%;
+    margin-left: 0px;
+}
+
+.resultList > li {
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+    width: 620px;
+    margin: auto;
+}
+
+.itemPort{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(141 32 32 / 46%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.itemNotMinecraftPort{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+    border-radius: 10px !important;
+    background-color: rgb(141 32 32 / 46%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+}
+
+.itemPort > h3 {
+    margin: 0px;
+    font-family: 'Minecraftia', sans-serif;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+
+}
+
+.itemPort > h3:hover {
+
+    cursor: pointer;
+    color: #c65757;
+    transform: scale(1.02);
+}
+
+.itemPort > span {
+    font-size: 12px;
+
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #320b0bb1;
+    color: white;
+    font-family: 'Minecraftia', sans-serif;
+
+}
+
+.itemMinecraftBanner > img{
+    margin-top: 2px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+}
+
+.status_minecraft{
+    color: #69e04e !important;
+}
+
+.status_not_minecraft{
+    color: #e04e4e !important;
+}
+
+@media (max-width: 1090px){
+    section {
+        bottom: 0px !important;
+    }
+
+    .resultList {
+        height: 80% !important;
+    }
+}
+
+@media (max-width: 1500px){
+    .filters {
+        width: 80% !important;
+        margin-left: 65px;
+    }
+
+    .ResultContainer {
+        height: 600px;
+        width: 758px;
+    }
+}
+
+@media (max-width: 1265px) {
+    .filters {
+        width: 75% !important;
+        margin-top: 95px;
+    }
+
+    .resultList {
+        margin-left: -41px;
+    }
+
+    .itemNotMinecraftPort {
+        padding: 9px;
+    }
+}
+
+@media (max-width: 915px) {
+    .resultList > li {
+        list-style: none;
+        transition: all 0.3s ease-in-out;
+        width: 546px;
+        margin: auto;
+    }
+
+    .ResultContainer {
+        height: 600px;
+        width: 694px;
+    }
+}
+
+@media (max-height: 915px) {
+    .resultList {
+        height: 44% !important;
+    }
+
+
+    .filters {
+        width: 75% !important;
+        margin-top: 271px;
+    }
+}

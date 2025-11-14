@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/logotipo-mascota-diablo_94073-65-removebg-preview.png" type="image/png">
+    <title>Diavlo v3</title>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- IMPORTAMOS LA LIBRERIA PARA HACER EL EFECTO DE LAS PARTICULAS  -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../js/events.js"></script>
+    <!-- ESTILOS PERSONALIZADOS -->
+    <link rel="stylesheet" href="../../electron/css/index.css">
+    <link rel="stylesheet" href="../../electron/css/responsive_index.css">
+    <link rel="stylesheet" href="../../electron/css/styles.css">
+    <link rel="stylesheet" href="../../electron/css/header.css">
+    <link rel="stylesheet" href="../../electron/css/responsive.css">
+
+    <!-- IMPORTAMOS Funcionalidad de JS -->
+    <script src="../js/index.js"></script>
+
+</head>
+
+<body>
+    <!-- Efecto de particulas -->
+    <div id="particles-container"></div>
+
+    <main>
+
+        <header class="loggedHeader">
+            <div class="headerUserData">
+                <div class="rankImage">
+                    <img src="../images/logotipo-mascota-diablo_94073-65-removebg-preview.png" draggable="false" alt="logo">
+                </div>
+                <div class="user-info">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <h2 class="usernameHeader">frozencode</h2>
+                    </div>
+
+                    <div class="rank-data">
+                        <h3>Owner + </h3>
+                        <span>300 Dias</span>
+                    </div>
+                </div>
+            </div>
+            <div class="headerOptions">
+                <img class="HeaderHome" src="../images/home.webp" height="20px" width="20px">
+                <img class="HeaderHome" id="logout" src="../images/logout.png" height="20px" width="20px">
+            </div>
+        </header>
+
+        <section>
+
+            <div class="options">
+                <div class="rankOptions">
+                    <div class="finder-container">
+                        <h3>FINDER</h3>
+                        <img src="../images/lupa2.png" width="100px" height="100px">
+                        <p>Obtén datos de un nickname de redes sociales o un correo electrónico</p>
+                        <div class="requisitos">
+                            <p>Disponible para Mazikeen o Lucifer</p>
+                        </div>
+
+                    </div>
+                    <div class="mc-container">
+                        <h3>MC</h3>
+                        <img src="../images/minecraft-cube.png"></img>
+                        <p>Obtén datos de un nickname de minecraft</p>
+
+                        <div class="requisitos">
+                            <p>Disponible para Human o Lucifer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-container">
+                    <h3>AJUSTES</h3>
+                    <img
+                        src="../images/settings.png">
+                    <p>Configura tu cuenta</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li><span>Diavlo v3 © 2023</span></li>
+            <li><a href="https://shoppy.gg/@diavlomc">Tienda</a></li>
+            <li><a href="https://discord.gg/programadores">Discord</a></li>
+            <li><a href="https://t.me/diavlodb">Telegram</a></li>
+        </ul>
+
+    </footer>
+</body>
+
+</html>

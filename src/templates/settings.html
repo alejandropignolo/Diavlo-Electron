@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/logotipo.png" type="image/png">
+    <title>Diavlo v3.6 - Settings</title>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- IMPORTAMOS LA LIBRERIA PARA HACER EL EFECTO DE LAS PARTICULAS  -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../js/events.js"></script>
+    <script src="../js/settings.js"></script>
+    <!-- ESTILOS PERSONALIZADOS -->
+    <link rel="stylesheet" href="../../electron/css/index.css">
+    <link rel="stylesheet" href="../../electron/css/responsive_index.css">
+    <link rel="stylesheet" href="../../electron/css/styles.css">
+    <link rel="stylesheet" href="../../electron/css/header.css">
+    <link rel="stylesheet" href="../../electron/css/responsive.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../../electron/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <style>
+        @media (max-height: 1060px) {
+            section {
+                bottom: 7px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Efecto de particulas -->
+    <div id="particles-container"></div>
+
+    <audio id="backgroundAudio" autoplay>
+        <source src="../song/click.mp3" type="audio/mp3">
+    </audio>
+
+    <main>
+
+        <header class="loggedHeader">
+            <div class="headerUserData">
+                <div class="rankImage">
+                    <img src="../images/logotipo.png" draggable="false" alt="logo">
+                </div>
+                <div class="user-info">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <h2 class="usernameHeader">Loading...</h2>
+                    </div>
+
+                    <div class="rank-data">
+                        <div class="data__diavlo">
+                            <h3>Loading...</h3>
+                            <span>Loading...</span>
+                        </div>
+                        <div class="data__gen">
+                            <h3></h3>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerOptions">
+                <img class="HeaderHome" src="../images/home.webp" height="20px" width="20px">
+                <img class="HeaderHome" id="logout" src="../images/logout.png" height="20px" width="20px">
+
+            </div>
+        </header>
+
+        <section>
+            <div class="header_settings">
+                <svg id="engranaje_settings" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="1.9 1.5 122.8 122.3" zoomAndPan="magnify" style="fill: rgb(0, 0, 0);" original_string_length="2391"><g id="__id112_sy0n22a3p" style="fill: rgb(236, 231, 226);"><path d="m52.1 100.9l-2.8-1c0.2-2 0.1-4.1-0.2-6.1l2.7-1.2c1.7-0.8 2.4-2.8 1.6-4.4l-1.6-3.4c-0.8-1.7-2.8-2.4-4.4-1.6l-2.7 1.2c-1.3-1.6-2.8-3-4.5-4.2l1-2.8c0.6-1.7-0.3-3.7-2-4.3l-3.5-1.3c-1.7-0.6-3.7 0.3-4.3 2l-1 2.8c-2-0.2-4.1-0.1-6.1 0.2l-1.3-2.8c-0.8-1.7-2.8-2.4-4.4-1.6l-3.4 1.6c-1.7 0.8-2.4 2.8-1.6 4.4l1.2 2.7c-1.6 1.3-3 2.8-4.2 4.5l-2.8-1c-1.7-0.6-3.7 0.3-4.3 2l-1.3 3.5c-0.3 0.8-0.3 1.7 0.1 2.6 0.4 0.8 1 1.4 1.9 1.7l2.8 1c-0.2 2-0.1 4.1 0.2 6.1l-2.7 1.2c-1.7 0.8-2.4 2.8-1.6 4.4l1.6 3.4c0.8 1.7 2.8 2.4 4.4 1.6l2.7-1.2c1.3 1.6 2.8 3 4.5 4.2l-1 2.8c-0.3 0.8-0.3 1.7 0.1 2.6 0.4 0.8 1 1.4 1.9 1.7l3.5 1.3c0.8 0.3 1.7 0.3 2.6-0.1 0.8-0.4 1.4-1 1.7-1.9l1-2.8c2 0.2 4.1 0.1 6.1-0.2l1.2 2.7c0.8 1.7 2.8 2.4 4.4 1.6l3.4-1.6c1.7-0.8 2.4-2.8 1.6-4.4l-1.2-2.7c1.6-1.3 3-2.8 4.2-4.5l2.8 1c0.8 0.3 1.8 0.3 2.6-0.1s1.4-1 1.7-1.9l1.3-3.5c0.7-1.6-0.2-3.5-1.9-4.2zm-18.4 8.8c-1.8 0.8-3.6 1.2-5.5 1.2-5.2 0-9.9-3-12-7.7-3.1-6.6-0.1-14.5 6.5-17.6 1.8-0.8 3.6-1.2 5.5-1.2 5.2 0 9.9 3 12 7.7 3 6.7 0.1 14.5-6.5 17.6z" style="fill: inherit;"/><path d="m120.3 51.6l-4.7-1.7c0.4-3.4 0.2-6.9-0.4-10.3l4.5-2.1c2.8-1.3 4.1-4.6 2.8-7.5l-2.6-5.7c-1.3-2.8-4.6-4.1-7.5-2.8l-4.5 2.1c-2.2-2.7-4.8-5.1-7.6-7l1.7-4.7c1.1-2.9-0.4-6.2-3.3-7.2l-5.9-2.2c-2.8-1-6.2 0.5-7.2 3.3l-1.7 4.7c-3.4-0.4-6.9-0.2-10.3 0.4l-2.1-4.5c-1.3-2.8-4.6-4.1-7.5-2.8l-5.7 2.6c-2.8 1.3-4.1 4.6-2.8 7.5l2.1 4.5c-2.7 2.2-5.1 4.8-7 7.6l-4.7-1.7c-2.8-1-6.2 0.5-7.2 3.3l-2.2 5.9c-0.5 1.4-0.5 2.9 0.2 4.3 0.6 1.4 1.8 2.4 3.2 2.9l4.7 1.7c-0.4 3.4-0.3 6.9 0.4 10.3l-4.5 2.1c-2.8 1.3-4.1 4.6-2.8 7.5l2.6 5.7c1.3 2.8 4.6 4.1 7.5 2.8l4.5-2.1c2.2 2.7 4.8 5.1 7.6 7l-1.7 4.7c-0.5 1.4-0.5 2.9 0.2 4.3 0.6 1.4 1.8 2.4 3.2 2.9l5.9 2.2c1.4 0.5 2.9 0.5 4.3-0.2 1.4-0.6 2.4-1.8 2.9-3.2l1.7-4.7c3.4 0.4 6.9 0.3 10.3-0.4l2.1 4.5c1.3 2.8 4.6 4.1 7.5 2.8l5.7-2.6c2.8-1.3 4.1-4.6 2.8-7.5l-2.1-4.5c2.7-2.2 5.1-4.8 7-7.6l4.7 1.7c1.4 0.5 2.9 0.5 4.3-0.2 1.4-0.6 2.4-1.8 2.9-3.2l2.2-5.9c0.9-2.7-0.6-5.9-3.5-7zm-30.9 14.7c-2.9 1.4-6.1 2-9.3 2-8.7 0-16.6-5.1-20.2-12.9-5.2-11.1-0.3-24.4 10.8-29.5 2.9-1.4 6.1-2 9.3-2 8.7 0 16.6 5.1 20.2 12.9 5.2 11.1 0.3 24.4-10.8 29.5z" style="fill: inherit;"/></g></svg>
+                <h1>SETTINGS</h1>
+            </div>
+
+            <div class="container-settings">
+
+                <div class="change_password">
+                    <form method="post" >
+                        <h3 class="password-settings">CONTRASEÑA ACTUAL</h3>
+                        <input class="settings_input-form" id="current_password" type="password" required>
+                        <h3 class="password-settings">CONTRASEÑA NUEVA</h3>   
+                        <input class="settings_input-form" id="new_password" type="password" required>
+                        <h3 class="password-settings">REPETIR CONTRASEÑA NUEVA</h3>
+                        <input class="settings_input-form" id="new_password_2" type="password" id="last_setting" required>
+                        <br>
+                        <span id="error_new_passwords">➤ ¡Las nuevas contraseñas no coinciden!</span>
+                        <span id="error_current_password">➤ ¡La contraseña actual es incorrecta!</span>
+                        <span id="contrasena_cambiada">➤ ¡La contraseña ha sido cambiada con éxito!</span>
+                        <br>
+                        <input type="submit" id="settings_input" value="Guardar">
+                    </form>
+                </div>
+    
+                <div class="change_password" id="bffile">
+                    <form method="post" >
+                        <h3 id="bruteforce-header">BRUTEFORCE FILES</h3>
+                        <p id="explain-brute">Con esta opción podrás establecer el archivo para aplicar el ataque
+                            de <strong>fuerza bruta</strong> para <strong>desencriptar las contraseñas</strong>, recuerda que los <strong>EXTENDED</strong> disponen
+                            de una mayor cantidad de archivos además de que estos son más potentes y efectivos.
+                        </p>
+                        <select name="bruteforce-file" id="choose-brute" required>
+                            <option value="0">diavlo1.txt (19 millones)</option>
+                            <option value="1" class="disabled-brute" disabled>diavlo2.txt (26 millones) [Extended]</option>
+                            <option value="2" class="disabled-brute" disabled>diavlo3.txt (26 millones) [Extended]</option>
+                            <option value="3" class="disabled-brute" disabled>diavlo4.txt (19 millones) [Extended]</option>
+                            <option value="4" class="disabled-brute" disabled>diavlo5.txt (20 millones) [Extended]</option>
+                            <option value="5" class="disabled-brute" disabled>diavlo6.txt (20 millones) [Extended]</option>
+                            <option value="6" class="disabled-brute" disabled>diavlo7.txt (14 millones) [Extended]</option>
+                        </select>
+                        <br>
+                    </form>
+                </div>
+            </div>
+
+            <div class="container-discord">
+                <i class="discord-image fa-brands fa-discord"></i>
+                <h1 class="container-discord__discord">Recibe los roles de tu tarifa <strong class="discord-link">de Diavlo</strong> en Discord. Recuerda que debes de estar en nuestro server de <a class="discord-link" href="https://discord.gg/programadores">Diavlo</a> y que tendrás que escribir $claim (key)</h1>
+                <form class="container-discord__form">
+                    <input class="container-discord__send" type="submit" value="Crear key">
+
+                    <div class="container-discord__key">
+                        
+                    </div>
+
+                    <div class="container-user-discord">
+                        Bienvenido a Diavlo @<span class="discord-user">serlink04</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li><span>Diavlo v3.6 © 2025</span></li>
+            <li><a href="https://diavlo.store">Tienda</a></li>
+            <li><a href="https://discord.gg/programadores">Discord</a></li>
+            <li><a href="https://t.me/diavlochannel">Telegram</a></li>
+        </ul>
+
+    </footer>
+</body>
+
+</html>

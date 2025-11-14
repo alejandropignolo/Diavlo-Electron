@@ -1,0 +1,7 @@
+/* RESPONSIVE PARA LA ALTURA */
+
+@media (max-height: 1060px) {
+    section {
+        bottom: -52px !important;
+    }
+}
